@@ -1,0 +1,132 @@
+/* 📌 Categories Section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.categories-container {
+  width: 90%;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  border: 3px solid #ffcc00; /* Yellow Border */
+  box-shadow: 5px 5px 20px rgba(255, 204, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* 🔥 Unique Title Styling */
+.title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.3);
+}
+
+.highlight {
+  color: #ffcc00;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 🎴 Category Grid */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+/* 🎨 Category Card */
+.card {
+  width: 230px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, white, #ffcc00);
+  border-radius: 15px;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ⚡ Hover Effect */
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 5px 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+/* 🖼 Category Image */
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* ✨ Category Text */
+.card-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: white;
+  background: #ffcc00;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* 🌟 Floating Glow Effect */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: rgba(255, 204, 0, 0.2);
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* 🌟 Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

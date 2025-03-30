@@ -1,0 +1,133 @@
+.lamination-container {
+  width: 85%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  border: 3px solid #ffcc00;
+  box-shadow: 5px 5px 20px rgba(255, 204, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.4);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.lamination-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* 🔥 Labels */
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* 📂 Input & Select Styles */
+select,
+input {
+  width: 270px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  background: white;
+  margin-top: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+select:hover,
+input:hover,
+select:focus,
+input:focus {
+  border-color: black;
+  box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.6);
+  outline: none;
+}
+
+/* 💰 Cost Display */
+.cost {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+  margin: 20px 0;
+}
+
+/* 🟡 Order Button */
+.order-btn, .confirm-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.order-btn:hover, .confirm-btn:hover {
+  background: black;
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* 🔥 Payment Options */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* 🔥 Adds space between buttons */
+  margin-top: 10px;
+}
+
+.payment-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.payment-btn:hover {
+  background: black;
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+select option {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+/* ✨ Fade In Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
