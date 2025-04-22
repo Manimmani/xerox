@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; // Make sure this is imported
 import "../styles/printout.css";
 
 const PrintoutFormat = () => {
@@ -15,25 +16,67 @@ const PrintoutFormat = () => {
     }
   };
 
-  // Define cost per page based on selection
   const getCostPerPage = () => {
-    let cost = 1; // Default cost for B&W Single-Sided
+    let cost = 1;
     if (colorOption === "Color") cost += 3;
     if (printType === "Double-Sided") cost -= 0.5;
     if (paperSize === "A3") cost += 2;
     return cost;
   };
 
-  // Calculate total cost
   const totalCost = pageCount * getCostPerPage();
 
   const handleProceed = () => {
-    if (!file) {
-      alert("Please upload a document.");
-      return;
-    }
-    alert(`Total Cost: ₹${totalCost}\nProceeding to payment...`);
-  };
+    // if (!file) {
+    //   alert("Please upload a document.");
+    //   return;
+    // }
+
+    // const orderData = {
+    //   fileName: file.name,
+    //   paperSize,
+    //   printType,
+    //   colorOption,
+    //   pageCount,
+    //   totalCost,
+    // };
+
+    // axios
+    //   .post("http://localhost:3000/submit-order", orderData)
+    //   .then((res) => {
+    //     alert(`${res.data.message}`);
+    //     // navigate('/payment');
+    //   })
+    //   .catch((err) => {
+    //     alert(err.response?.data?.message || "Error submitting order.");
+    //   });
+      if (!file) {
+        alert("Please upload a document.");
+        return;
+      }
+    
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("paperSize", paperSize);
+      formData.append("printType", printType);
+      formData.append("colorOption", colorOption);
+      formData.append("pageCount", pageCount);
+      formData.append("totalCost", totalCost);
+    
+      axios
+        .post("http://localhost:3000/submit-order", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then((res) => {
+          alert(`${res.data.message}`);
+          // optionally redirect
+        })
+        .catch((err) => {
+          alert(err.response?.data?.message || "Error submitting order.");
+        });
+    };
 
   return (
     <div className="container">
@@ -87,3 +130,4 @@ const PrintoutFormat = () => {
 };
 
 export default PrintoutFormat;
+

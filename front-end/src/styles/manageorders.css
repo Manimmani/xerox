@@ -1,0 +1,69 @@
+.manage-orders-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .manage-orders-container .title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .manage-orders-container p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .order-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #4a90e2;
+    padding: 16px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .order-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-card h4 {
+    margin: 0 0 10px;
+    color: #4a90e2;
+  }
+  
+  .order-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .complete-button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .complete-button:hover {
+    background-color: #218838;
+  }
+  

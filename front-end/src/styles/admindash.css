@@ -1,0 +1,98 @@
+/* ✅ Admin Dashboard Container */
+.admin-dashboard-container {
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 3px solid #ffcc00;
+    box-shadow: 5px 5px 20px rgba(255, 204, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Title Section */
+  .title-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.3);
+  }
+  
+  .highlight {
+    color: #ffcc00;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Grid Layout for Admin Options */
+  .grid-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  /* ✅ Admin Action Buttons */
+  .admin-link {
+    background-color: #000;  /* Black background */
+    color: #fff;  /* White text */
+    padding: 15px 40px;  /* Spacious padding */
+    font-size: 20px;  /* Larger font for visibility */
+    font-weight: bold;  /* Bold text */
+    border-radius: 12px;  /* Rounded corners */
+    text-decoration: none;  /* Remove underline */
+    width: 250px;  /* Fixed width for uniformity */
+    text-align: center;  /* Center the text */
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);  /* Soft shadow */
+    transition: all 0.3s ease-in-out;  /* Smooth hover transition */
+    cursor: pointer;  /* Pointer cursor for hover */
+  }
+  
+  /* ✅ Hover Effect for Buttons */
+  .admin-link:hover {
+    background-color: #ffcc00;  /* Yellow background on hover */
+    color: #000;  /* Text turns black */
+    box-shadow: 5px 5px 15px rgba(255, 204, 0, 0.5);  /* Yellow glow effect */
+    transform: scale(1.05);  /* Slight zoom effect */
+  }
+  
+  /* ✅ Focus Effect for Buttons */
+  .admin-link:focus {
+    outline: none;
+    border: 2px solid #ffcc00;  /* Yellow border on focus */
+  }
+  
+  /* ✅ Disabled Button State */
+  .admin-link:disabled {
+    background-color: #ccc;  /* Light gray background */
+    color: #666;  /* Disabled text color */
+    cursor: not-allowed;  /* Disable cursor */
+    box-shadow: none;  /* No shadow when disabled */
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

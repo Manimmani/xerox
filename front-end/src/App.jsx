@@ -10,6 +10,8 @@ import PhotoCopy from "./ui/PhotoCopy";
 import AdminLogin from "./ui/AdminLogin";
 import FrontPage2 from "./ui/Frontpage2";
 import { Signup } from "./ui/Signup";
+import Admin_dash from "./ui/Admin_dash"
+import Manage_orders from "./ui/Manage_orders";
 
 
 
@@ -27,6 +29,9 @@ const App = () => {
       <Route path="/PhotoCopy" element={<PhotoCopy/>} />
       <Route path="/admin" element={<AdminLogin/>} />
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/dash_board" element={<Admin_dash/>}/>
+      <Route path="/manage-orders" element={<Manage_orders/>}/>
+      
     </Routes>
     // </BrowserRouter>
   

@@ -14,10 +14,17 @@ const AdminLogin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // setError("");
-      axios.post('',{email,password})
-      .then(result=>console.log(result))
-      .catch(err=>console.log(err))
-
+      // axios.post('',{email,password})
+      // .then(result=>console.log(result))
+      // .catch(err=>console.log(err))
+      const adminId = "admin@gmail.com";
+      const Password = "admin123";
+       if (email === adminId && password === Password) {
+      localStorage.setItem("isLoggedIn", "true"); // Save login status
+      navigate("/dash_board"); // Redirect to Categories
+    } else {
+      setError("Invalid Student ID or Password"); // ✅ Update error state
+    }
     // try {
     //   await signInWithEmailAndPassword(auth,name,roll, email, password);
     //   navigate("/admin"); // Redirect to Admin Dashboard
